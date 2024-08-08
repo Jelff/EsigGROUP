@@ -3,6 +3,7 @@
 Este projeto consiste na criação de uma aplicação SPA utilizando Angular na versão mais recente até o momento (version 18.1.3). O principal objetivo foi implementar uma interface de gerenciamento de tarefas, conforme o modelo proposto no FIGMA. Além disso, utilizei o In Memory DB para simular o backend, mockando os dados da aplicação.
 
 Funcionalidades Implementadas
+
 a) Aplicação SPA em Angular:
 Criei uma aplicação SPA utilizando Angular 18, proporcionando uma experiência de usuário dinâmica e responsiva.
 
