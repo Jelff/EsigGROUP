@@ -1,0 +1,97 @@
+.btn-nova-tarefa {
+    background-color: #5A55AB; 
+    color: white;
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold;
+  }
+  
+  .btn-nova-tarefa:hover {
+    background-color: #4a49a4; 
+  }
+  
+  .btn-nova-tarefa:focus {
+    outline: none; 
+  }
+  
+  .btn-nova-tarefa i {
+    font-size: 1.5rem; 
+    margin-right: 1rem; 
+    border-radius: 10px;    
+  }
+  
+  .btn-secondary {
+    background-color: #F1E6FC;
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .form-floating .form-control, .form-floating .form-select {
+    border-radius: 10px; 
+    box-shadow: none;
+  }
+  
+  .custom-file-upload {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px dashed #d3d3d3;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-label {
+    text-align: center;
+    color: #495057;
+  }
+  
+  .custom-file-label i {
+    font-size: 2rem;
+    margin-left: 10px; 
+    color: #007bff;
+  }
+  
+  .custom-file-label span {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .custom-file-label small {
+    font-size: 0.875rem;
+    color: #6c757d;
+    display: block;
+    margin-top: 0.5rem; 
+  }
+  

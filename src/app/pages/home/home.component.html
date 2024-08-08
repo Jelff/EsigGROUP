@@ -1,95 +1,32 @@
 <div class="container-fluid">
-    <div class="row">
-        <!-- Coluna roxa (menu) -->
-        <div class="col-md-3 bg-purple vh-100">
-            <div class="d-flex align-items-center">
-                <button class="btn btn-light mr-2">
-                    <i class="bi bi-list"></i>
-                </button>
-                <h2 class="mb-0 text-white">EsigGROUP</h2>
-            </div>
-            <ul class="list-unstyled mt-4">
-                <li class="py-2"><a class="text-white" href="#">Dashboard</a></li>
-                <li class="py-2"><a class="text-white" href="#">Tarefas</a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-9 bg-light content">
-            <app-navbar></app-navbar>
-            <div class="container mt-4">
-                <h1 class="mb-4">Olá Fábio,</h1>
-                <p>Bem-vindo ao seu gestor de tarefas!</p>
-
-                <!-- Botão para abrir o modal -->
-                <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#novaTarefaModal">
-                    Nova Tarefa
-                </button>
-
-                <div class="row text-center">
-                    <div class="col-sm-4">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h2>4</h2>
-                                <p>to do</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h2>2</h2>
-                                <p>doing</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h2>64</h2>
-                                <p>done</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gráfico de tarefas -->
-                <div class="mt-4">
-                    <h5># Tarefas concluídas por dia</h5>
-                    <!-- Coloque aqui seu gráfico ou outra visualização -->
-                    <div class="chart-placeholder" style="height: 200px; background: #f4f4f4;">
-                        <!-- Gráfico vai aqui -->
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-md-3 sidebar vh-100 bg-purple">
+      <div class="header">
+        <button class="btn btn-no-style mr-2" (click)="toggleMenu()">
+          <i class="bi bi-list text-white"></i>
+        </button>
+        <h2 class="mb-0 text-white">EsigGROUP</h2>
+      </div>
+      <ul class="nav flex-column" [class.collapse]="isMenuCollapsed">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/dashboard" routerLinkActive="active">
+            <i class="bi bi-grid-fill"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/tarefas" routerLinkActive="active">
+            <i class="bi bi-list-task"></i>
+            Tarefas
+          </a>
+        </li>
+      </ul>
     </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="novaTarefaModal" tabindex="-1" aria-labelledby="novaTarefaModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="novaTarefaModalLabel">Nova Tarefa</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Formulário para criar uma nova tarefa -->
-                <form>
-                    <div class="mb-3">
-                        <label for="tarefaTitulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="tarefaTitulo" placeholder="Digite o título da tarefa">
-                    </div>
-                    <div class="mb-3">
-                        <label for="tarefaDescricao" class="form-label">Descrição</label>
-                        <textarea class="form-control" id="tarefaDescricao" rows="3" placeholder="Digite a descrição da tarefa"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
-        </div>
+    <!-- Conteúdo principal -->
+    <div class="col-md-9 bg-light content">
+      <app-navbar></app-navbar>
+      <router-outlet></router-outlet>
     </div>
+  </div>
 </div>

@@ -1,0 +1,91 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+      <h2 class="mb-0">Tarefas</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Tarefas</li>
+        </ol>
+      </nav>
+    </div>
+    <button class="btn-nova-tarefa" data-bs-toggle="modal" data-bs-target="#novaTarefaModal">
+      <i class="bi bi-plus-square"></i>
+      Nova Tarefa
+    </button>
+  </div>
+
+  <div class="filters mb-3">
+    <div class="row g-2">
+      <div class="col-md">
+        <select class="form-select">
+          <option selected>Projetos</option>
+        </select>
+      </div>
+      <div class="col-md">
+        <select class="form-select">
+          <option selected>Status</option>
+        </select>
+      </div>
+      <div class="col-md">
+        <select class="form-select">
+          <option selected>Todas Prioridades</option>
+        </select>
+      </div>
+      <div class="col-md">
+        <button class="btn btn-light w-100">
+          Últimos 30 dias <i class="bi bi-calendar3"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Tarefa</th>
+          <th scope="col">Prior.</th>
+          <th scope="col">Projeto</th>
+          <th scope="col">Status</th>
+          <th scope="col">Respons.</th>
+          <th scope="col">Deadline</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarefa of tarefas">
+          <td>{{ tarefa.titulo }}</td>
+          <td>
+            <span class="badge"
+                  [ngClass]="{
+                    'badge-alta': tarefa.prioridade === 'Alta',
+                    'badge-media': tarefa.prioridade === 'Média',
+                    'badge-baixa': tarefa.prioridade === 'Baixa'
+                  }">
+              {{ tarefa.prioridade }}
+            </span>
+          </td>
+          <td>{{ tarefa.projeto }}</td>
+          <td>
+            <span class="badge"
+                  [ngClass]="{
+                    'badge-concluido': tarefa.status === 'Concluído',
+                    'badge-nao-concluido': tarefa.status !== 'Concluído'
+                  }">
+              {{ tarefa.status }}
+            </span>
+          </td>
+          <td>{{ tarefa.responsaveis }}</td>
+          <td>{{ tarefa.deadline }}</td>
+          <td>
+            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+            <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-pencil"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<app-nova-tarefa-modal></app-nova-tarefa-modal>

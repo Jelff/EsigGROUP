@@ -1,0 +1,63 @@
+.btn-nova-tarefa {
+    background-color: #5A55AB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .btn-nova-tarefa:hover {
+    background-color: #4a49a4;
+  }
+  
+  .font-style {
+    font-weight: bold;
+  }
+  
+  .btn-nova-tarefa:focus {
+    outline: none; 
+  }
+  
+  .btn-nova-tarefa i {
+    font-size: 1.5rem; 
+    margin-right: 1rem;
+    border-radius: 3rem;
+  }
+  
+  .icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  .bg-blue {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .bg-purple {
+    background-color: rgba(123, 0, 255, 0.1);
+  }
+  
+  .bg-green {
+    background-color: rgba(40, 167, 69, 0.1);
+  }
+  
+  .icon-image {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .card-body .d-flex.align-items-center .ml-2 {
+    margin-left: 10px;
+  }
+  

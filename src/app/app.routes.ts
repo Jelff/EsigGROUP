@@ -1,7 +1,16 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component'; // Ajuste o caminho conforme necessário
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TarefasComponent } from './pages/tarefas/tarefas.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // Outras rotas
+  { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'tarefas', component: TarefasComponent },
+    ],
+  },
 ];

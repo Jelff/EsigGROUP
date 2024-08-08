@@ -1,0 +1,54 @@
+<div class="modal fade" id="novaTarefaModal" tabindex="-1" aria-labelledby="novaTarefaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="novaTarefaModalLabel">Criar Tarefa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo" name="titulo" placeholder="Título da Tarefa">
+              <label for="titulo">Título da Tarefa</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="detalhes" [(ngModel)]="detalhes" name="detalhes" placeholder="Detalhes da Tarefa" style="height: 100px;"></textarea>
+              <label for="detalhes">Detalhes da Tarefa</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" id="deadline" [(ngModel)]="deadline" name="deadline" placeholder="Deadline">
+              <label for="deadline">Deadline</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="prioridade" [(ngModel)]="prioridade" name="prioridade" placeholder="Prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+              </select>
+              <label for="prioridade">Prioridade</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="responsaveis" [(ngModel)]="responsaveis" name="responsaveis" placeholder="Responsáveis">
+              <label for="responsaveis">Responsáveis</label>
+            </div>
+            <div class="mb-3">
+              <label for="anexo" class="form-label">Anexar Arquivo</label>
+              <div class="custom-file-upload">
+                <input type="file" id="anexo" class="form-control-file" (change)="onFileSelected($event)">
+                <label for="anexo" class="custom-file-label">
+                  <i class="bi bi-upload"></i>
+                  <span>Anexar arquivo</span>
+                  <small>A better way to tell which species are vulnerable</small>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancelar()">Cancelar</button>
+          <button type="button" class="btn-nova-tarefa" (click)="criarTarefa()"><i class="bi bi-plus-square"></i>Criar Tarefa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

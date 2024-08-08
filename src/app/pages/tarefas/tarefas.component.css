@@ -1,0 +1,113 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  .btn-nova-tarefa {
+    background-color: #5A55AB;
+    color: white;
+    border: none; 
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold;
+  }
+  
+  .btn-nova-tarefa:hover {
+    background-color: #4a49a4;
+  }
+  
+  .btn-nova-tarefa:focus {
+    outline: none; 
+  }
+  
+  .btn-nova-tarefa i {
+    font-size: 1.5rem;
+    margin-right: 1rem; 
+    border-radius: 10px;
+  }
+  
+  .badge {
+    font-size: 0.875rem;
+  }
+  
+  .filters .form-select,
+  .filters .btn {
+    margin-bottom: 10px;
+    box-shadow: none;
+  }
+  
+  .breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  .breadcrumb a {
+    color: inherit;
+  }
+  
+  .table-responsive {
+    margin-top: 20px;
+  }
+  
+  .table th,
+  .table td {
+    vertical-align: middle;
+  }
+  
+  .table .btn {
+    border: none; 
+    padding: 0.25rem 0.5rem; 
+    font-size: 1rem; 
+  }
+  
+  .table .btn i {
+    font-size: 1.2rem; 
+  }
+  
+  .table .btn-outline-danger {
+    color: #ff3131;
+    background-color: transparent;
+  }
+  
+  .table .btn-outline-primary {
+    color: #5c6564;
+    background-color: transparent;
+  }
+  
+  .table .btn-outline-secondary {
+    color: #414b51;
+    background-color: transparent;
+  }
+  
+
+  .badge-alta {
+    background-color: #ff1414 !important;
+    color: white !important;
+  }
+  
+  .badge-media {
+    background-color: #ffa16c !important;
+    color: white !important;
+  }
+  
+  .badge-baixa {
+    background-color: #14b9ff !important;
+    color: white !important;
+  }
+
+  .badge-concluido {
+    background-color: #4ad894 !important;
+    color: white !important;
+  }
+  
+  .badge-nao-concluido {
+    background-color: #ff1414 !important;
+    color: white !important;
+  }
+  

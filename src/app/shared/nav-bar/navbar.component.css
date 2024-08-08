@@ -11,6 +11,19 @@
 }
 
 .chart-placeholder {
-  border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+.navbar {
+  height: 4.5rem;
+  border-bottom: none !important;
+  box-shadow: none;
+}
+
+.navbar-no-padding {
+  padding: 0;
+}
+
+.col-md-9 {
+  padding: 0;
 }
