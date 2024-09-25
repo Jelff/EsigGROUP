@@ -4,7 +4,7 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { TarefasComponent } from '../tarefas/tarefas.component';
-import { NovaTarefaModalComponent } from '../nova-tarefa-modal/nova-tarefa-modal.component'; 
+import { NovaTarefaModalComponent } from '../../shared/nova-tarefa-modal/nova-tarefa-modal.component'; 
 
 @Component({
   selector: 'app-home',

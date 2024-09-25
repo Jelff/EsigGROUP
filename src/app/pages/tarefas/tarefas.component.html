@@ -9,35 +9,10 @@
         </ol>
       </nav>
     </div>
-    <button class="btn-nova-tarefa" data-bs-toggle="modal" data-bs-target="#novaTarefaModal">
+    <button class="btn-nova-tarefa" (click)="novaTarefa()">
       <i class="bi bi-plus-square"></i>
       Nova Tarefa
     </button>
-  </div>
-
-  <div class="filters mb-3">
-    <div class="row g-2">
-      <div class="col-md">
-        <select class="form-select">
-          <option selected>Projetos</option>
-        </select>
-      </div>
-      <div class="col-md">
-        <select class="form-select">
-          <option selected>Status</option>
-        </select>
-      </div>
-      <div class="col-md">
-        <select class="form-select">
-          <option selected>Todas Prioridades</option>
-        </select>
-      </div>
-      <div class="col-md">
-        <button class="btn btn-light w-100">
-          Últimos 30 dias <i class="bi bi-calendar3"></i>
-        </button>
-      </div>
-    </div>
   </div>
 
   <div class="table-responsive">
@@ -57,35 +32,49 @@
         <tr *ngFor="let tarefa of tarefas">
           <td>{{ tarefa.titulo }}</td>
           <td>
-            <span class="badge"
-                  [ngClass]="{
-                    'badge-alta': tarefa.prioridade === 'Alta',
-                    'badge-media': tarefa.prioridade === 'Média',
-                    'badge-baixa': tarefa.prioridade === 'Baixa'
-                  }">
+            <span class="badge" [ngClass]="{
+                  'badge-alta': tarefa.prioridade === 'Alta',
+                  'badge-media': tarefa.prioridade === 'Média',
+                  'badge-baixa': tarefa.prioridade === 'Baixa'
+                }">
               {{ tarefa.prioridade }}
             </span>
           </td>
           <td>{{ tarefa.projeto }}</td>
           <td>
-            <span class="badge"
-                  [ngClass]="{
-                    'badge-concluido': tarefa.status === 'Concluído',
-                    'badge-nao-concluido': tarefa.status !== 'Concluído'
-                  }">
+            <span class="badge" [ngClass]="{
+              'badge-concluido': tarefa.status === 'concluido',  
+              'badge-pendente': tarefa.status === 'pendente'
+            }">
               {{ tarefa.status }}
             </span>
-          </td>
-          <td>{{ tarefa.responsaveis }}</td>
-          <td>{{ tarefa.deadline }}</td>
+          </td>           
+          <td>{{ tarefa.responsaveis.join(', ') }}</td>
+          <td>{{ tarefa.deadline | date: 'shortDate' }}</td>
           <td>
-            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
-            <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
-            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-outline-danger btn-sm" (click)="abrirConfirmacaoModal(tarefa)">
+              <i class="bi bi-trash"></i>
+            </button>            
+            <button class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-eye"></i>
+            </button>
+            <button class="btn btn-outline-secondary btn-sm" (click)="editarTarefa(tarefa)">
+              <i class="bi bi-pencil"></i>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-<app-nova-tarefa-modal></app-nova-tarefa-modal>
+
+<app-nova-tarefa-modal *ngIf="showModal"
+  [tarefa]="tarefaEditando" 
+  (salvar)="salvarTarefa($event)" 
+  (cancelar)="cancelarEdicao()">
+</app-nova-tarefa-modal>
+
+<app-confirmacao-modal *ngIf="showConfirmacaoModal"
+  (confirmado)="confirmarRemocao()"
+  (cancelado)="cancelarRemocao()">
+</app-confirmacao-modal>

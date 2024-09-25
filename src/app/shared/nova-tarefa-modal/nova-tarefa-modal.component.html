@@ -1,0 +1,59 @@
+<div class="modal fade show" tabindex="-1" style="display: block;" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nova Tarefa</h5>
+        <button type="button" class="close" (click)="fecharModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo" name="titulo">
+          </div>
+          <div class="form-group">
+            <label for="detalhes">Detalhes</label>
+            <textarea class="form-control" id="detalhes" [(ngModel)]="detalhes" name="detalhes"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="projeto">Projeto</label>
+            <input type="text" class="form-control" id="projeto" [(ngModel)]="projeto" name="projeto">
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" [(ngModel)]="status" name="status">
+              <option value="pendente">Pendente</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="responsaveis">Responsáveis</label>
+            <input type="text" class="form-control" id="responsaveis" [(ngModel)]="responsaveisInput" name="responsaveisInput" (ngModelChange)="updateResponsaveis($event)">
+          </div>          
+          <div class="form-group">
+            <label for="deadline">Deadline</label>
+            <input type="date" class="form-control" id="deadline" [(ngModel)]="deadline" name="deadline">
+          </div>
+          <div class="form-group">
+            <label for="prioridade">Prioridade</label>
+            <select class="form-control" id="prioridade" [(ngModel)]="prioridade" name="prioridade">
+              <option>Alta</option>
+              <option>Média</option>
+              <option>Baixa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fileUpload">Upload de Arquivo</label>
+            <input type="file" class="form-control" (change)="onFileSelected($event)">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="fecharModal()">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="criarTarefa()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

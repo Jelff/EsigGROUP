@@ -45,8 +45,8 @@ body {
 
 .sidebar .nav-link.active,
 .sidebar .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Efeito hover */
-  color: white; /* Cor do texto ao hover */
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white; 
 }
 
 .sidebar .nav-link i {
@@ -73,4 +73,8 @@ body {
 
 .collapse.show {
   display: block;
+}
+
+.nav-link {
+  margin-bottom: 10px;
 }

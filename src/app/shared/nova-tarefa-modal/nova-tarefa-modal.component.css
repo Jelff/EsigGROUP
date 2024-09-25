@@ -1,0 +1,185 @@
+.btn-nova-tarefa {
+  background-color: #5A55AB; 
+  color: white;
+  border: none; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  font-weight: bold;
+}
+
+.btn-nova-tarefa:hover {
+  background-color: #4a49a4; 
+}
+
+.btn-nova-tarefa:focus {
+  outline: none; 
+}
+
+.btn-nova-tarefa i {
+  font-size: 1.5rem; 
+  margin-right: 1rem; 
+  border-radius: 10px;    
+}
+
+.btn-secondary {
+  background-color: #F1E6FC;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px; 
+  padding: 15px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-control {
+  border-radius: 10px; 
+  box-shadow: none;
+}
+
+.custom-file-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px dashed #d3d3d3;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-label {
+  text-align: center;
+  color: #495057;
+}
+
+.custom-file-label i {
+  font-size: 2rem;
+  margin-left: 10px; 
+  color: #007bff;
+}
+
+.custom-file-label span {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.custom-file-label small {
+  font-size: 0.875rem;
+  color: #6c757d;
+  display: block;
+  margin-top: 0.5rem; 
+}
+
+.modal-header {
+  background-color: #5A55AB;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.close {
+  color: white;
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 20px; 
+}
+
+h5 {
+  margin-bottom: 20px; 
+}
+
+.close {
+  background: transparent; 
+  border: none; 
+  color: white; 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  margin-left: auto; 
+}
+
+.close:hover {
+  color: #ffdddd; 
+}
+
+.close:focus {
+  outline: none; 
+}
+
+.btn-secondary {
+  background-color: #F1E6FC; 
+  color: black; 
+  border: none; 
+  font-weight: bold; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.btn-secondary:hover {
+  background-color: #e0c4f1; 
+}
+
+.btn-primary {
+  background-color: #5A55AB; 
+  color: white; 
+  border: none; 
+  font-weight: bold; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.btn-primary:hover {
+  background-color: #4a49a4; 
+}
+
+.badge-concluido {
+  background-color: green; 
+  color: white; 
+}
+
+.badge-pendente {
+  background-color: red; 
+  color: white; 
+}
