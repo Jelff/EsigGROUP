@@ -1,27 +1,32 @@
 # EsigGroup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+Este projeto consiste na criação de uma aplicação SPA utilizando Angular na versão mais recente até o momento (version 18.1.3). O principal objetivo foi implementar uma interface de gerenciamento de tarefas, conforme o modelo proposto no FIGMA. Além disso, utilizei o In Memory DB para simular o backend, mockando os dados da aplicação.
 
-## Development server
+Funcionalidades Implementadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+a) Aplicação SPA em Angular:
+Criei uma aplicação SPA utilizando Angular 18, proporcionando uma experiência de usuário dinâmica e responsiva.
 
-## Code scaffolding
+b) Mock de Dados com In Memory DB:
+Usei a biblioteca In Memory DB para mockar os dados da aplicação, simulando um backend de maneira eficiente. Isso me facilitou o desenvolvimento e teste da aplicação sem a necessidade de configurar um backend real.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+c) Criação da interface baseada no modelo proposto no FIGMA:
+A interface da aplicação foi desenvolvida seguindo o modelo proposto no FIGMA, garantindo uma experiência de usuário visualmente agradável e intuitiva.
 
-## Build
+D) O Crud de criação e exclusão das tarefas foi criado, podendo adicionar e excluir tarefas na Página, tarefas. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Como Executar o Projeto
+Siga os passos abaixo para rodar o projeto localmente:
 
-## Running unit tests
+em seu terminal: 
+git clone https://github.com/Jelff/EsigGROUP.git
+cd EsigGROUP
+npm install
+ng serve
+Abra seu navegador e acesse 'http://localhost:4200'
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ou então: 
+Baixe o zip do projeto, descompacte, abra-o em uma idea e rode no terminal:
+npm install 
+ng serve 
+Abra seu navegador e acesse 'http://localhost:4200'
